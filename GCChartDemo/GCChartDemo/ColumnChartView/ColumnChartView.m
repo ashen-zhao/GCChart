@@ -73,7 +73,7 @@
     if (self.columnColor.length == 0) {
         self.columnColor = @"#308ff7";// 默认颜色
     }
-    
+    self.numberOfColumn = 7;
     // y轴
     self.yAxisView = [[UIView alloc] init];
     self.yAxisView.backgroundColor = [UIColor whiteColor];
@@ -215,7 +215,7 @@
         self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.width);
         self.xAxisView.frame = CGRectMake(0, self.scrollView.bounds.size.height - 20, self.scrollView.bounds.size.width, 20);
     } else {
-        CGFloat groupWidth = self.scrollView.bounds.size.width / 5;
+        CGFloat groupWidth = self.scrollView.bounds.size.width / self.numberOfColumn;
         self.scrollView.contentSize = CGSizeMake(groupWidth * self.dataArray.count, self.scrollView.bounds.size.height);
         self.xAxisView.frame = CGRectMake(0, self.scrollView.bounds.size.height - 20, groupWidth * self.dataArray.count, 20);
     }
@@ -254,7 +254,7 @@
         }
     }
     
-    CGFloat groupWidth = self.scrollView.bounds.size.width / 5;
+    CGFloat groupWidth = self.scrollView.bounds.size.width / self.numberOfColumn;
     for (int i = 0; i < self.dataArray.count; i++) {
         UIView *groupCenterLineView = [[UIView alloc] initWithFrame:CGRectMake(groupWidth * i + groupWidth / 2 - 0.5, 1, 1, 5)];
         groupCenterLineView.backgroundColor = [self colorWithHexString:@"#898989"];
@@ -416,7 +416,7 @@
         self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.width);
         self.xAxisView.frame = CGRectMake(0, self.scrollView.bounds.size.height - 20, self.scrollView.bounds.size.width, 20);
     } else {
-        CGFloat groupWidth = self.scrollView.bounds.size.width / 5;
+        CGFloat groupWidth = self.scrollView.bounds.size.width / self.numberOfColumn;
         self.scrollView.contentSize = CGSizeMake(groupWidth * self.dataArray.count, self.scrollView.bounds.size.height);
         self.xAxisView.frame = CGRectMake(0, self.scrollView.bounds.size.height - 20, groupWidth * self.dataArray.count, 20);
     }
@@ -454,7 +454,7 @@
         }
     }
     
-    CGFloat groupWidth = self.scrollView.bounds.size.width / 5;
+    CGFloat groupWidth = self.scrollView.bounds.size.width / self.numberOfColumn;
     for (int i = 0; i < self.dataArray.count; i++) {
         UIView *groupCenterLineView = [[UIView alloc] initWithFrame:CGRectMake(groupWidth * i + groupWidth / 2 - 0.5, 1, 1, 5)];
         groupCenterLineView.backgroundColor = [self colorWithHexString:@"#898989"];
@@ -610,7 +610,7 @@
         self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.width);
         self.xAxisView.frame = CGRectMake(0, self.scrollView.bounds.size.height - 20, self.scrollView.bounds.size.width, 20);
     } else {
-        CGFloat groupWidth = self.scrollView.bounds.size.width / 5;
+        CGFloat groupWidth = self.scrollView.bounds.size.width / self.numberOfColumn;
         self.scrollView.contentSize = CGSizeMake(groupWidth * self.dataArray.count, self.scrollView.bounds.size.height);
         self.xAxisView.frame = CGRectMake(0, self.scrollView.bounds.size.height - 20, groupWidth * self.dataArray.count, 20);
     }
@@ -666,7 +666,7 @@
         }
     }
     
-    CGFloat groupWidth = self.scrollView.bounds.size.width / 5;
+    CGFloat groupWidth = self.scrollView.bounds.size.width / self.numberOfColumn;
     for (int i = 0; i < self.dataArray.count; i++) {
         UIView *groupCenterLineView = [[UIView alloc] initWithFrame:CGRectMake(groupWidth * i + groupWidth / 2 - 0.5, 1, 1, 5)];
         groupCenterLineView.backgroundColor = [self colorWithHexString:@"#898989"];

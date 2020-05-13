@@ -26,6 +26,7 @@
     self.columnChartView = [[ColumnChartView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 200) andDataNameArray:@[@"一工区",@"二工区",@"三工区",@"项目部",@"一大队",@"二中队",@"三小队"] andDataArray:@[@"121",@"137",@"215",@"258",@"65",@"78",@"47"] andColumnColor:@"#fbca58"];
     self.columnChartView.isSingleColumn = YES;
     self.columnChartView.scrollEnabled = YES;
+    self.columnChartView.numberOfColumn = 7;
     self.columnChartView.backgroundColor = [UIColor whiteColor];
     self.columnChartView.isColumnGradientColor = YES;
     self.columnChartView.columnGradientColorArray = @[@"#2c8efa",@"#42cbfe"];
